@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+{% block title %}
+booking
+
+{% endblock %}
+
+{% block content %}
+<h1 class="container bg-warning text-center">MAKE AN APPIONTMENT</h1>
+<hr>
+<div class="container w-50 text-center p-3 my- bg-warning">
+<form action="" method="post">
+    {% csrf_token %}
+    {{form|crispy}}
+    <br>
+    <button class="btn btn-success mb-" type="submit">submit</button>
+    
+</form>
+</div>
+{% endblock %}
